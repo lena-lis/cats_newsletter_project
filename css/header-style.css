@@ -1,0 +1,121 @@
+body {
+    background: rgba(245, 219, 237, 0.89);
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display";
+    font-size: 18px;
+    color: white;
+}
+
+
+header {
+    display: grid;
+    grid-template-columns: 170px 1fr 170px;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    align-items: center;
+    padding: 1em 2%;
+    background: url("../img/hero-1.jpg") border-box no-repeat top center;
+    background-size: cover;
+    background-color: linear-gradient (217deg, rgba(240, 167, 218, 0.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(166, 240, 166, 0.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(190, 136, 235, 0.8), rgba(0,0,255,0) 70.71%);
+}
+
+.logo-container {
+    position: relative;
+    text-align: left;
+   }
+
+.logo-container img {
+    height: 115px;
+    bottom: 2px;
+}
+
+.logo-text {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    font-family: "Amatic SC";
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.submit {
+    align-self: center;
+    margin-left: auto;
+    background: #c958c3;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    border: 3px outset transparent;
+    border-radius: 10px;
+}
+
+.submit:hover {
+    border: 3px outset #b631af;
+    border-radius: 10px; 
+}
+
+.navigation-link {
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    margin: 5px;
+    border: 3px outset transparent;
+    border-radius: 10px;
+}
+
+.navigation-link:hover {
+    background-color: #c958c3;
+    border: 3px outset #b631af;
+    border-radius: 10px;
+}
+
+
+.logo,
+.submit,
+.navigation-link {
+    text-decoration: none;
+    color: black;
+    filter: drop-shadow(0 0 10px white);
+}
+
+.nav-grid {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.navigation-list {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+.hero {
+    grid-column: 2 / 3;
+    grid-row: -1;
+    /*display: grid;
+    grid-template-columns: 170px 1fr 170px;*/
+    text-align: center;
+    filter: drop-shadow(0 0 6px black);
+    margin-bottom: 350px;
+}
+
+h1, p, .more {
+    grid-column: 2 / 3;
+}
+
+h1 {
+font-size: 65px;
+line-height: 1;
+padding: 5px;
+margin: 0;
+margin-top: 10px;
+}
+
