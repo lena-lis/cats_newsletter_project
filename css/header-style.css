@@ -32,6 +32,8 @@ header {
     bottom: 2px;
 }
 
+
+
 .logo-text {
     position: absolute;
     bottom: 2px;
@@ -64,6 +66,7 @@ header {
     margin: 5px;
     border: 3px outset transparent;
     border-radius: 10px;
+    text-align: center;
 }
 
 .navigation-link:hover {
@@ -87,14 +90,15 @@ header {
 }
 
 .navigation-list {
-    margin-left: auto;
-    margin-right: auto;
     padding: 10px;
     list-style-type: none;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 10px 20px;
+}
+
+.navigation-list li {
+    flex-grow: 1;
 }
 
 .hero {
