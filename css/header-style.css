@@ -7,7 +7,6 @@ body {
     color: white;
 }
 
-
 header {
     display: grid;
     grid-template-columns: 170px 1fr 170px;
@@ -22,17 +21,10 @@ header {
     linear-gradient(336deg, rgba(190, 136, 235, 0.8), rgba(0,0,255,0) 70.71%);
 }
 
-.logo-container {
-    position: relative;
-    text-align: left;
-   }
-
 .logo-container img {
     height: 115px;
     bottom: 2px;
 }
-
-
 
 .logo-text {
     position: absolute;
