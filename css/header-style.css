@@ -56,12 +56,15 @@ header {
     font-family: "Amatic SC";
     font-size: 25px;
     font-weight: 700;
+    text-shadow: 1px -2px 3px whitesmoke;
 }
 
 .submit {
     align-self: center;
     margin-left: auto;
-    background: #c958c3;
+    background: -webkit-linear-gradient(315deg, rgb(204, 132, 145) 45%, rgb(189, 70, 96) 85%, rgb(210, 48, 105));
+    background: -moz-linear-gradient(315deg, rgb(204, 132, 145) 45%, rgb(189, 70, 96) 85%, rgb(210, 48, 105));
+    background: linear-gradient(315deg, rgb(204, 132, 145) 45%, rgb(189, 70, 96) 85%, rgb(210, 48, 105));
     text-align: center;
     padding: 5px;
     border-radius: 10px;
@@ -70,7 +73,7 @@ header {
 }
 
 .submit:hover {
-    border: 3px outset #b631af;
+    border: 3px outset rgb(210, 48, 105);
     border-radius: 10px; 
 }
 
@@ -82,21 +85,23 @@ header {
     border: 3px outset transparent;
     border-radius: 10px;
     text-align: center;
+    text-shadow: 1px 1px 2px whitesmoke;
 }
 
 .navigation-link:hover {
-    background-color: #c958c3;
-    border: 3px outset #b631af;
+    background: -webkit-linear-gradient(315deg, rgb(204, 132, 145) 45%, rgb(189, 70, 96) 85%, rgb(210, 48, 105));
+    background: -moz-linear-gradient(315deg, rgb(204, 132, 145) 45%, rgb(189, 70, 96) 85%, rgb(210, 48, 105));
+    background: linear-gradient(315deg, rgb(204, 132, 145) 45%, rgb(189, 70, 96) 85%, rgb(210, 48, 105));
+    border: 3px outset rgb(210, 48, 105);
     border-radius: 10px;
 }
-
 
 .logo,
 .submit,
 .navigation-link {
     text-decoration: none;
     color: black;
-    filter: drop-shadow(0 0 10px white);
+    filter: drop-shadow(1px -2px 3px whitesmoke);
 }
 
 .nav-grid {
@@ -119,15 +124,8 @@ header {
 .hero {
     grid-column: 2 / 3;
     grid-row: -1;
-    /*display: grid;
-    grid-template-columns: 170px 1fr 170px;*/
     text-align: center;
-    filter: drop-shadow(0 0 6px black);
     margin-bottom: 350px;
-}
-
-h1, p, .more {
-    grid-column: 2 / 3;
 }
 
 h1 {
@@ -136,5 +134,7 @@ line-height: 1;
 padding: 5px;
 margin: 0;
 margin-top: 10px;
+text-shadow: -1px -1px 1px #1e181c,
+             2px 2px 1px #46243b;
 }
 
