@@ -22,13 +22,14 @@
 body {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
     width: 100%;
     background-color: rgba(166, 240, 166, 0.8);
     margin: 0;
     padding: 0;
     font-family: "Playfair Display";
     font-size: 18px;
-    color: white;
+    color: whitesmoke;
 }
 
 .main-body {
@@ -43,8 +44,12 @@ header {
     gap: 1em;
     align-items: center;
     padding: 1em 2%;
-    box-shadow: var(--shadow-elevation-high);
     text-shadow: 1px -2px 3px whitesmoke;
+    filter: drop-shadow(1px -2px 3px whitesmoke);
+}
+
+.logo-container {
+    position: relative;
 }
 
 .logo-container img {
@@ -53,12 +58,16 @@ header {
 }
 
 .logo-text {
-    position: absolute;
-    bottom: 2px;
-    left: 0;
     font-family: "Amatic SC";
     font-size: 25px;
     font-weight: 700;
+}
+
+header .logo-text {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    color: black;
 }
 
 .submit {
@@ -72,6 +81,7 @@ header {
     border-radius: 10px;
     border: 3px outset transparent;
     border-radius: 10px;
+    color: black;
 }
 
 .submit:hover {
@@ -91,6 +101,7 @@ header {
     border-radius: 10px;
     text-align: center;
     text-shadow: 1px 1px 2px whitesmoke;
+    color: black;
 }
 
 .navigation-link:hover {
@@ -101,12 +112,9 @@ header {
     border-radius: 10px;
 }
 
-.logo,
-.submit,
-.navigation-link {
+a {
     text-decoration: none;
-    color: black;
-    filter: drop-shadow(1px -2px 3px whitesmoke);
+    color: whitesmoke;
 }
 
 .main-navigation {
@@ -126,12 +134,18 @@ header {
     flex-grow: 1;
 }
 
+main {
+    grid-column: 1 / 4;
+    min-height: calc(100vh - 126px);
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
 .hero {
-    /*grid-column: 2 / 3;
-    grid-row: -1;*/
+    grid-column: 2 / 3;
+    grid-row: -2;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 350px;
+    margin: 10px;
 }
 
 h1 {
@@ -144,3 +158,16 @@ text-shadow: -1px -1px 1px #1e181c,
              2px 2px 1px #46243b;
 }
 
+.hello {
+    font-size: 20px;
+}
+
+footer {
+    grid-column: 1 / 4;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2%;
+    text-shadow: 1px -2px 3px rgb(189, 70, 96);
+}
