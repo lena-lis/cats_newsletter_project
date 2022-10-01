@@ -104,7 +104,7 @@ header .logo-text {
     color: black;
 }
 
-.navigation-link:hover {
+.navigation-link:hover:not(.current) {
     background: -webkit-linear-gradient(315deg, rgb(204, 132, 145) 45%, rgb(189, 70, 96) 85%, rgb(210, 48, 105));
     background: -moz-linear-gradient(315deg, rgb(204, 132, 145) 45%, rgb(189, 70, 96) 85%, rgb(210, 48, 105));
     background: linear-gradient(315deg, rgb(204, 132, 145) 45%, rgb(189, 70, 96) 85%, rgb(210, 48, 105));

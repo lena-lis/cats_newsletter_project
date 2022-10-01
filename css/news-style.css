@@ -1,0 +1,7 @@
+.navigation-link.current {
+    background: -webkit-linear-gradient(315deg, rgb(204, 132, 145) 45%, rgb(189, 70, 96) 85%, rgb(210, 48, 105));
+    background: -moz-linear-gradient(315deg, rgb(204, 132, 145) 45%, rgb(189, 70, 96) 85%, rgb(210, 48, 105));
+    background: linear-gradient(315deg, rgb(204, 132, 145) 45%, rgb(189, 70, 96) 85%, rgb(210, 48, 105));
+    border: 3px outset rgb(210, 48, 105);
+    border-radius: 10px;
+}
