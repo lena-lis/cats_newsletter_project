@@ -1,7 +1,30 @@
 {
+  "name": "cats_newsletter",
   "private": true,
   "devDependencies": {
+    "autoprefixer": "10.4.0",
+    "browser-sync": "^2.27.7",
     "gulp": "4.0.2",
-    "gulp-dart-sass": "^1.0.2"
-  }
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "postcss": "8.3.11",
+    "stylelint": "13.13.1"
+  },
+  "scripts": {
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "build": "gulp styles",
+    "start": "gulp"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
+  ],
+  "engines": {
+    "node": "^16"
+  },
+  "type": "module"
 }
