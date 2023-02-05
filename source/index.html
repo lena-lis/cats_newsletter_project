@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="коты, мейн-кун, новости">
     <meta name="description" content="Новостной блог о жизни домашних мейн-кунов">
-    <link rel="apple-touch-icon" sizes="180x180" href="img\favicon_package_v0.16\apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img\favicon_package_v0.16\favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img\favicon_package_v0.16\favicon-16x16.png">
-    <link rel="manifest" href="img\favicon_package_v0.16\site.webmanifest">
-    <link rel="mask-icon" href="img\favicon_package_v0.16\safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    
-    <link rel="stylesheet" href="css/index-style.css">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" type="image/png" sizes="180x180">
+    <link rel="icon" href="img/favicons/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preload" href="fonts/noto-sans-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/tenor-sans-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
     .logo img:hover {
         background: url("img/logo-hover1.png") no-repeat top left;
@@ -24,24 +22,32 @@
     </style>
     <title>Кошачий вестник</title>
 </head>
-<body class="main-body">
-    <header class="main-header">
-        <a class="logo" href="#">
-            <div class="logo-container">
-                <img src="img/logo.png">
-                <span class="logo-text">Кошачий<br>Вестник</span>
-            </div>
+<body class="page__body">
+  <header class="main-header">
+    <div class="main-header__container">
+      <div class="main-header__logo">
+        <a class="main-header__logo-link" href="index.html">
+          <picture>
+            <source srcset="img/logos/logo-desktop.svg" width="196" height="101" type="image/svg+xml"
+              media="(min-width: 1150px)">
+            <source srcset="img/logos/logo-tablet.svg" width="186" height="91" type="image/svg+xml"
+              media="(min-width: 768px)">
+            <img class="main-header__logo-image" src="img/logos/logo-mobile.svg" width="182" height="32"
+              alt="Логотип новостного блога 'Кошачий Вестник'">
+          </picture> 
         </a>
-        <nav class="main-navigation">
-            <ul class="navigation-list">
-                <li><a class="navigation-link" href="news.html">Новости</a></li>
-                <li><a class="navigation-link" href="#">Фотогалерея</a></li>
-                <li><a class="navigation-link" href="#">О нас</a></li>
-                <li><a class="navigation-link" href="#">Контакты</a></li>              
-            </ul>
-        </nav>
-        <a class="submit" href="#">Оформить подписку</a>
-    </header>
+      </div>
+      <nav class="main-navigation">
+        <ul class="navigation-list">
+          <li><a class="navigation-link" href="news.html">Новости</a></li>
+          <li><a class="navigation-link" href="#">Фотогалерея</a></li>
+          <li><a class="navigation-link" href="#">О нас</a></li>
+          <li><a class="navigation-link" href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="submit" href="#">Оформить подписку</a>
+    </div>
+  </header>
     
     <main>
         <section class="hero">
