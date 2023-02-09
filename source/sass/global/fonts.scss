@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/source/fonts/tenor-sans-regular.woff2") format("woff2"), url("/source/fonts/tenor-sans-regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/source/fonts/noto-sans-regular.woff2") format("woff2"), url("/source/fonts/noto-sans-regular.woff") format("woff");
+  font-display: swap;
+}

@@ -1,0 +1,6 @@
+// Базовые блоки
+@use "./global/bootstrap.scss";
+
+// Блоки
+@use "./components/main-container.scss";
+@use "./components/visually-hidden.scss";
