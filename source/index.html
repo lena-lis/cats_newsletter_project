@@ -37,10 +37,12 @@
           </picture>
         </a>
       </div>
+
       <nav class="main-navigation main-navigation--nojs">
         <button class="main-navigation__toggle button" type="button" aria-label="Открыть меню">
           <span class="main-navigation__toggle-icon"></span>
         </button>
+
         <div class="main-navigation__container">
           <ul class="main-navigation__list site-list">
             <li class="site-list__item">
@@ -53,12 +55,26 @@
               <a class="navigation-link" href="#">О нас</a>
             </li>
           </ul>
+
           <div class="main-navigation__search">
             <a class="main-navigation__search-button" href="#">
-
+              <picture>
+                <source srcset="img/header/search-desktop.png 1x, img/header/search-desktop@2x.png 2x" width="124" height="260" type="image/png"
+                  media="(min-width: 1150px)">
+                <img class="main-navigation__search-image" src="img/header/search-tablet.png" width="172" height="165" srcset="img/header/search-tablet@2x.png 2x"
+                  alt="Поиск по сайту">
+              </picture>
               <span class="main-navigation__search-text">Поиск по сайту</span>
             </a>
+
+            <div class="main-navigation__search-popover search-popover">
+              <form class="search-popover__form" action="#" method="post" enctype="text/plain">
+                <label class="visually-hidden" for="search">Поиск</label>
+                <input class="search-popover__field field" type="search" id="search" name="search" placeholder="Искать все новости!" required>
+              </form>
+            </div>
           </div>
+
           <div class="main-navigation__submit">
             <a class="main-navigation__submit-button" href="#">Оформить подписку</a>
           </div>
@@ -67,17 +83,139 @@
     </div>
   </header>
     
-    <main>
+    <main class="main-container">
         <section class="hero">
-            <h1>Удивительные новости из мира домашних котов</h1>
-            <p class="hello">Познакомьтесь с замурчательными событиями из жизни Жижки и Вислы</p>
+          <div class="hero__container">
+            <h1 class="hero__title">Удивительные новости из мира домашних котов</h1>
+            <p class="hero__greeting">Познакомьтесь с замурчательными событиями из жизни Жижки и Вислы</p>
+          </div>    
+        </section>
+
+        <section class="about">
+          <div class="about__container">
+            <h2 class="visually-hidden">О наших котах</h2>
+            <ul class="about__list cats-list">
+              <li class="cats-list__item cat-profile">
+                <div class="cat-profile__image-wrapper">
+                  <picture>
+                    <source srcset="img/about/zyzka-about-desktop.jpg 1x, img/about/zyzka-about-desktop@2x.jpg 2x" width="200"
+                      height="199" type="image/jpeg" media="(min-width: 1150px)">
+                    <source srcset="img/about/zyzka-about-tablet.jpg 1x, img/about/zyzka-about-tablet@2x.jpg 2x" width="130"
+                      height="130" type="image/jpeg" media="(min-width: 768px)">
+                    <img class="cat-profile__image" src="img/about/zyzka-about-mobile.jpg" width="100" height="100"
+                      srcset="img/about/zyzka-about-mobile@2x.jpg 2x" alt="Кот Жижка">
+                  </picture>
+                </div>
+                <h3 class="cat-profile__title">Жижка</h3>
+                <dl class="cat-profile__list quality-list">
+                  <div class="quality-list__item">
+                    <dt class="quality-list__term">Имя при рождении</dt>
+                    <dd class="quality-list__definition">Kristofer Vaytka Family</dd>
+                  </div>
+                  <div class="quality-list__item">
+                    <dt class="quality-list__term">Дата рождения</dt>
+                    <dd class="quality-list__definition">11.02.2016</dd>
+                  </div>
+                  <div class="quality-list__item">
+                    <dt class="quality-list__term">Порода</dt>
+                    <dd class="quality-list__definition">мейн-кун</dd>
+                  </div>
+                  <div class="quality-list__item">
+                    <dt class="quality-list__term">Окрас</dt>
+                    <dd class="quality-list__definition">чёрный мраморный</dd>
+                  </div>
+                  <div class="quality-list__item">
+                    <dt class="quality-list__term">Характер</dt>
+                    <dd class="quality-list__definition">скверный, но ласковый</dd>
+                  </div>
+                </dl>
+                <button class="cat-profile__button cat-profile__button--zyzka button" type="button">Подробнее</button>
+              </li>
+
+              <li class="cats-list__item cat-profile">
+                <div class="cat-profile__image-wrapper">
+                  <picture>
+                    <source srcset="img/about/wisla-about-desktop.jpg 1x, img/about/wisla-about-desktop@2x.jpg 2x" width="200"
+                      height="199" type="image/jpeg" media="(min-width: 1150px)">
+                    <source srcset="img/about/wisla-about-tablet.jpg 1x, img/about/wisla-about-tablet@2x.jpg 2x" width="130"
+                      height="130" type="image/jpeg" media="(min-width: 768px)">
+                    <img class="cat-profile__image" src="img/about/wisla-about-mobile.jpg" width="100" height="100"
+                      srcset="img/about/wisla-about-mobile@2x.jpg 2x" alt="Кот Жижка">
+                  </picture>
+                </div>
+                <h3 class="cat-profile__title">Висла</h3>
+                <dl class="cat-profile__list quality-list">
+                  <div class="quality-list__item">
+                    <dt class="quality-list__term">Имя при рождении</dt>
+                    <dd class="quality-list__definition">ChocoMuffin from Tassel Magic</dd>
+                  </div>
+                  <div class="quality-list__item">
+                    <dt class="quality-list__term">Дата рождения</dt>
+                    <dd class="quality-list__definition">18.04.2015</dd>
+                  </div>
+                  <div class="quality-list__item">
+                    <dt class="quality-list__term">Порода</dt>
+                    <dd class="quality-list__definition">мейн-кун</dd>
+                  </div>
+                  <div class="quality-list__item">
+                    <dt class="quality-list__term">Окрас</dt>
+                    <dd class="quality-list__definition">тикированная черепаха</dd>
+                  </div>
+                  <div class="quality-list__item">
+                    <dt class="quality-list__term">Характер</dt>
+                    <dd class="quality-list__definition">очень, очень мягкий, но порой бандитский</dd>
+                  </div>
+                </dl>
+                <button class="cat-profile__button cat-profile__button--wisla button" type="button">Подробнее</button>
+              </li>
+            </ul>
+          </div>
         </section>
     </main>
 
-    <footer>
-            <a class="logo-text" href="#">Кошачий вестник</a>
-            <a class="policy" href="#">Политика конфиденциальности</a>
-            <p class="copyright">Кошачий Вестник ©2022 Все права защищены</p>
+    <footer class="main-footer">
+      <div class="main-footer__container">
+        <div class="main-footer__logo">
+          <a class="main-footer__logo-link" href="index.html">
+            <svg aria-hidden="true" focusable="false" width="142" height="24">
+              <use href="img/sprite.svg#logo-footer"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="main-footer__socials socials">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__item-link" href="#">
+                <svg class="socials__item-icon" aria-hidden="true" focusable="false" width="25" height="25">
+                  <use href="#"></use>
+                </svg>
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__item-link" href="#">
+                <svg class="socials__item-icon" aria-hidden="true" focusable="false" width="25" height="25">
+                  <use href="img/sprite.svg#github"></use>
+                </svg>
+                <span class="visually-hidden">GitHub</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__item-link" href="#">
+                <svg class="socials__item-icon" aria-hidden="true" focusable="false" width="25" height="25">
+                  <use href="#"></use>
+                </svg>
+                <span class="visually-hidden">Telegram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="main-footer__copyright">
+          <b class="copyright__text">Проект Елены Лисиченок</b>
+        </div>
+      </div>
     </footer>
 </body>
 </html>
