@@ -1,7 +1,162 @@
 @use "../global/bootstrap.scss";
 
-.main-navigation--closed .main-navigation__container {
+@include bootstrap.keyframes(topBar_open) {
+  0% { transform: translateY(0px) rotate(0deg) ; width: 30px; }
+  10% {transform: translateY(-2px) rotate(0deg); width: 30px; }
+  50% {transform: translateY(3px) rotate(45deg); width: 30px; }
+  75% {transform: translateY(-2px) rotate(45deg); width: 30px; }
+  100% {transform: translateY(0) rotate(45deg); width: 30px; }
+}
+
+@include bootstrap.keyframes(bottomBar_open) {
+  0% { transform: translateY(0px) rotate(0deg) ; width: 30px; }
+  10% { transform: translateY(-2px) rotate(0deg) ; width: 30px; }
+  60% {transform: translateY(3px) rotate(-45deg); width: 30px; }
+  75% {transform: translateY(-2px) rotate(-45deg); width: 30px; }
+  100% {transform: translateY(0) rotate(-45deg); width: 30px; }
+}
+
+@include bootstrap.keyframes(menuLabel_open) {
+  0% { transform: translateY(0px); opacity: 1; }
+  25% {transform: translateY(-18px); }
+  45% {transform: translateY(28px); opacity: 1; }
+  48% {transform: translateY(50px); opacity: 0; }
+  100% {transform: translateY(30px); opacity: 0; }
+}
+
+@include bootstrap.keyframes(topBar_close) {
+  0% {transform: translateY(17px) rotate(45deg); width: 42px; }
+  35% {transform: translateY(-8px) rotate(-4deg); width: 30px; }
+  53% {transform: translateY(10px) rotate(3deg); width: 30px; }
+  70% {transform: translateY(-6px) rotate(0deg); width: 30px; }
+  100% { transform: translateY(-2px) rotate(0deg) ; width: 42px; }
+}
+
+@include bootstrap.keyframes(bottomBar_close) {
+  0% {transform: translateY(-8px) rotate(-45deg); width: 42px; }
+  35% {transform: translateY(-18px) rotate(6deg); width: 30px; }
+  53% {transform: translateY(0px) rotate(-3deg); width: 30px; }
+  68% { transform: translateY(-7px) rotate(0deg) ; width: 30px; }
+  100% { transform: translateY(0px) rotate(0deg) ; width: 30px; }
+}
+
+@include bootstrap.keyframes(menuLabel_close) {
+  0% {transform: translateY(30px); opacity: 0; }
+  5% {transform: translateY(25px); opacity: 1; }
+  25% {transform: translateY(-30px); opacity: 1; }
+  37% {transform: translateY(-22px); opacity: 1; }
+  45% {transform: translateY(-22px); opacity: 1; }
+  58% {transform: translateY(8px) rotate(-10deg); opacity: 1; }
+  83% {transform: translateY(-6px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 1; }
+}
+
+/*.main-navigation--closed*/ .main-navigation__container {
   @media (max-width: bootstrap.$mobile-width-only) {
     display: none;
   }
+}
+
+.main-navigation__toggle {
+  box-sizing: border-box;
+  position: absolute;
+  right: 18px;
+  bottom: 15px;
+
+  display: block;
+  width: 54px;
+  height: 47px;
+  padding: 0;
+
+  border: none;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation--closed .main-navigation__toggle-icon {
+  position: inherit;
+  @include bootstrap.center-element;
+
+  width: 30px;
+  height: 23px;
+  padding: 0;
+
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #231f20;
+    border-radius: 5px;
+
+    animation-fill-mode: forwards;
+    content: "";
+  }
+  
+  &:before {
+    top: 0;
+    right: 0;
+    transform-origin: left center;
+    @include bootstrap.animate("topBar_close 1s ease-in-out");
+  }
+  
+  &:after {
+    top: 8px;
+    right: 0;
+    transform-origin: right center;
+    @include bootstrap.animate("bottomBar_close 1s ease-in-out");
+  }
+}
+
+.main-navigation--opened .main-navigation__toggle-icon {
+  display: block;
+  position: absolute;
+  @include bootstrap.center-element;
+  width: 30px;
+  height: 30px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    @include bootstrap.center-element;
+    width: 42px;
+    height: 3px;
+    background-color: #231f20;
+    border-radius: 5px;
+    content: "";
+  }
+
+  &::before {  
+    @include bootstrap.animate("topBar_open 1s ease-in-out");
+    animation-fill-mode: forwards;
+  }
+
+  &::after {
+    @include bootstrap.animate("bottomBar_open 1s ease-in-out");
+    animation-fill-mode: forwards;
+  }
+}
+
+.main-navigation__toggle-text {
+  position: inherit;
+  bottom: 12px;
+  left: 12px;
+
+  display: block;
+
+  font-size: 11px;
+  line-height: 10px;
+}
+
+.main-navigation--closed .main-navigation__toggle-text {
+  @include bootstrap.animate("menuLabel_close 1s ease-in");
+  animation-fill-mode: forwards;
+}
+
+.main-navigation--opened .main-navigation__toggle-text {
+  @include bootstrap.animate("menuLabel_open 1s ease-in");
+  animation-fill-mode: forwards;
 }

@@ -2,6 +2,7 @@
 @use "./global/bootstrap.scss";
 
 // Блоки
+@use "./components/button.scss";
 @use "./components/main-container.scss";
 @use "./components/main-header.scss";
 @use "./components/main-navigation.scss";
