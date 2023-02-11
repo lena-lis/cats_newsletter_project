@@ -25,15 +25,15 @@
 }
 
 @include bootstrap.keyframes(topBar_close) {
-  0% {transform: translateY(17px) rotate(45deg); width: 42px; }
+  0% {transform: translateY(17px) rotate(45deg); width: 30px; }
   35% {transform: translateY(-8px) rotate(-4deg); width: 30px; }
   53% {transform: translateY(10px) rotate(3deg); width: 30px; }
   70% {transform: translateY(-6px) rotate(0deg); width: 30px; }
-  100% { transform: translateY(-2px) rotate(0deg) ; width: 42px; }
+  100% { transform: translateY(-2px) rotate(0deg) ; width: 30px; }
 }
 
 @include bootstrap.keyframes(bottomBar_close) {
-  0% {transform: translateY(-8px) rotate(-45deg); width: 42px; }
+  0% {transform: translateY(-8px) rotate(-45deg); width: 30px; }
   35% {transform: translateY(-18px) rotate(6deg); width: 30px; }
   53% {transform: translateY(0px) rotate(-3deg); width: 30px; }
   68% { transform: translateY(-7px) rotate(0deg) ; width: 30px; }
@@ -51,10 +51,30 @@
   100% { transform: translateY(0px); opacity: 1; }
 }
 
-/*.main-navigation--closed*/ .main-navigation__container {
+@include bootstrap.keyframes(menu_opening) {
+  0% {
+    transform: translateX(-80px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.main-navigation--closed .main-navigation__container {
   @media (max-width: bootstrap.$mobile-width-only) {
     display: none;
   }
+}
+
+.main-navigation--opened .main-navigation__container {
+  position: absolute;
+  top: 81px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #ffffff;
+  @include bootstrap.animate("menu_opening 1s ease-in-out");
 }
 
 .main-navigation__toggle {
