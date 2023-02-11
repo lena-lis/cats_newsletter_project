@@ -1,0 +1,45 @@
+@use "../global/bootstrap.scss";
+
+.site-list {
+  @include bootstrap.list-reset;
+}
+
+.site-list__item {
+  box-sizing: border-box;
+  padding: 0 30px;
+  border-bottom: 1px solid #bdbcbc;
+}
+
+.site-list__link {
+  position: relative;
+  display: block;
+  padding: 23px 30px;
+  padding-left: 51px;
+  color: #292425;
+  text-decoration: none;
+
+  @media (max-width: bootstrap.$mobile-width-only) {
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 30px;
+      height: 30px;
+
+      background-color: transparent;
+      background-image: url("../../img/header/list-marker.png");
+      transform: translateY(-50%);
+      content: "";
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/header/list-marker@2x.png");
+        background-size: 30px 30px;
+      }
+    }
+  }
+}
+
+.site-list__item:nth-last-of-type(even) .site-list__link::before {
+  transform: rotateY(180deg) translateY(-50%);
+}

@@ -52,13 +52,8 @@
 }
 
 @include bootstrap.keyframes(menu_opening) {
-  0% {
-    transform: translateX(-80px);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
+  0% {transform: translateX(-80px);}
+  100% {transform: translateX(0);}
 }
 
 .main-navigation--closed .main-navigation__container {
