@@ -1,0 +1,14 @@
+.main-header {
+  width: 100%;
+  border-bottom: 1px solid #bdbcbc;
+}
+
+.main-header__container {
+  display: flex;
+  min-height: 80px;
+  padding: 0 30px;
+}
+
+.main-header__logo {
+  margin: auto 0;
+}

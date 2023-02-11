@@ -1,0 +1,7 @@
+@use "../global/bootstrap.scss";
+
+.main-navigation--closed .main-navigation__container {
+  @media (max-width: bootstrap.$mobile-width-only) {
+    display: none;
+  }
+}
