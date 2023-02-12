@@ -175,3 +175,21 @@
   @include bootstrap.animate("menuLabel_open 1s ease-in");
   animation-fill-mode: forwards;
 }
+
+// Поиск
+
+.main-navigation__search {
+  padding: 0 30px;
+  border-bottom: 1px solid #bdbcbc;
+}
+
+.main-navigation__search .menu-link::before {
+  transform: rotateY(180deg) translateY(-50%);
+}
+
+.main-navigation__search-image,
+.main-navigation__search-popover {
+  @media (max-width: bootstrap.$mobile-width-only) {
+    display: none;
+  }
+}
