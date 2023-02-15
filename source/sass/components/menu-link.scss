@@ -3,12 +3,14 @@
 .menu-link {
   position: relative;
   display: block;
-  padding: 23px 30px;
-  padding-left: 51px;
+  
   color: #292425;
   text-decoration: none;
 
   @media (max-width: bootstrap.$mobile-width-only) {
+    padding: 23px 30px;
+    padding-left: 51px;
+
     &::before {
       position: absolute;
       top: 50%;

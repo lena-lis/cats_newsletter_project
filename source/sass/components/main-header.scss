@@ -2,6 +2,10 @@
 
 .main-header {
   width: 100%;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    border-bottom: 1px solid #bdbcbc;
+  }
 }
 
 .main-header__container {
@@ -12,9 +16,23 @@
   @media (max-width: bootstrap.$mobile-width-only) {
     position: relative;
   }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    flex-direction: row;
+    justify-content: center; // NEED TO BE FIXED
+    min-height: 106px;
+    padding: 0 50px;
+  }
 }
 
-.main-header__logo {
+.main-header__logo-container {
   padding: 22px 30px;
   border-bottom: 1px solid #bdbcbc;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin: auto 0;
+    margin-right: 54px;
+    padding: 0;
+    border-bottom: none;
+  }
 }

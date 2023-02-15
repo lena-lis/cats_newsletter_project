@@ -2,14 +2,34 @@
 
 .site-list {
   @include bootstrap.list-reset;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .site-list__item {
   box-sizing: border-box;
   padding: 0 30px;
   border-bottom: 1px solid #bdbcbc;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    align-self: center;
+
+    padding: 0;
+
+    font-size: 18px;
+    text-align: center;
+
+    border-bottom: none;
+
+    &:not(:last-of-type) {
+      padding-right: 53px;
+    }
+  }
 }
 
-.site-list__item:nth-of-type(even) .site-list__link::before {
+.site-list__item:nth-of-type(even) .site-list__link::before {  // зеркально переворачивает маркеры в мобильном меню навигации
   transform: rotateY(180deg) translateY(-50%);
 }

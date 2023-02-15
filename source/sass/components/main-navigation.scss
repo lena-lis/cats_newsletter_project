@@ -56,9 +56,21 @@
   100% {transform: translateX(0);}
 }
 
+.main-navigation {
+  @media (min-width: bootstrap.$tablet-width){
+    display: flex;
+    align-items: center;
+  }
+}
+
 .main-navigation__container {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: bootstrap.$tablet-width){
+    position: relative;
+    flex-direction: row;
+  }
 }
 
 .main-navigation--closed .main-navigation__container {
@@ -181,14 +193,32 @@
   animation-fill-mode: forwards;
 }
 
+.main-navigation--nojs .main-navigation__toggle {
+  display: none;
+}
+
 // Поиск
 
 .main-navigation__search {
+  position: absolute;
+  top: 150%;
+  right: -50px;
   padding: 0 30px;
   border-bottom: 1px solid #bdbcbc;
 
   & .menu-link::before {
-    transform: rotateY(180deg) translateY(-50%);
+    transform: rotateY(180deg) translateY(-50%); // зеркально переворачивает маркер в мобильном меню навигации
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+.main-navigation__search-text {
+  @media (min-width: bootstrap.$tablet-width) {
+    display: none;
   }
 }
 
@@ -202,8 +232,17 @@
 
 // Подписка
 
-.main-navigation__submit .menu-link::before {
+.main-navigation__submit-container .menu-link::before {
   display: none;
+}
+
+.main-navigation__submit-container {
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 100px;
+    min-height: 76px;
+    margin: 0;
+    margin-left: 54px;
+  }
 }
 
 .main-navigation__submit-link {
@@ -219,8 +258,17 @@
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/header/subscribe-mobile@2x.png");
   }
-}
 
-.main-navigation--nojs .main-navigation__toggle {
-  display: none;
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-left: 0 !important;
+
+    font-size: 16px;
+    text-align: center;
+
+    background-image: url("../../img/header/subscribe-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/header/subscribe-tablet@2x.png");
+    }
+  }
 }
