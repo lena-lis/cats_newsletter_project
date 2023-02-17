@@ -6,6 +6,8 @@
   @media (min-width: bootstrap.$tablet-width) {
     display: flex;
     flex-wrap: wrap;
+
+    width: 100%;
   }
 }
 
@@ -15,6 +17,7 @@
   border-bottom: 1px solid #bdbcbc;
 
   @media (min-width: bootstrap.$tablet-width) {
+    flex-grow: 1;
     align-self: center;
 
     padding: 0;

@@ -9,18 +9,14 @@
 }
 
 .main-header__container {
-  display: flex;
-  flex-direction: column;
-  min-height: 80px;
-
   @media (max-width: bootstrap.$mobile-width-only) {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 80px;
   }
 
   @media (min-width: bootstrap.$tablet-width) {
-    flex-direction: row;
-    justify-content: center; // NEED TO BE FIXED
-    min-height: 106px;
     padding: 0 50px;
   }
 }
@@ -30,9 +26,6 @@
   border-bottom: 1px solid #bdbcbc;
 
   @media (min-width: bootstrap.$tablet-width) {
-    margin: auto 0;
-    margin-right: 54px;
-    padding: 0;
-    border-bottom: none;
+    display: none;
   }
 }

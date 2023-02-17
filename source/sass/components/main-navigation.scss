@@ -70,6 +70,10 @@
   @media (min-width: bootstrap.$tablet-width){
     position: relative;
     flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 106px;
   }
 }
 
@@ -197,6 +201,19 @@
   display: none;
 }
 
+// Логотип
+
+.main-navigation__logo {
+  @media (max-width: bootstrap.$mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin: auto 0;
+    margin-right: 54px;
+  }
+}
+
 // Поиск
 
 .main-navigation__search {
@@ -221,7 +238,6 @@
     display: none;
   }
 }
-
 
 .main-navigation__search-image,
 .main-navigation__search-popover {
