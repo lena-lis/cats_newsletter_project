@@ -217,9 +217,6 @@
 // Поиск
 
 .main-navigation__search {
-  position: absolute;
-  top: 150%;
-  right: -50px;
   padding: 0 30px;
   border-bottom: 1px solid #bdbcbc;
 
@@ -228,6 +225,10 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
+    position: absolute;
+    top: 150%;
+    right: -50px;
+
     padding: 0;
     border-bottom: none;
   }
