@@ -32,7 +32,7 @@
     }
   }
 
-  @media (min-width: bootstrap.$tablet-width) {
+  @media (min-width: bootstrap.$desktop-width) {
     font-size: 24px;
 
     &:not(:last-of-type) {
