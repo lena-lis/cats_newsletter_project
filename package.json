@@ -24,7 +24,7 @@
     "not < 0.25%"
   ],
   "engines": {
-    "node": "^16"
+    "node": "18"
   },
   "type": "module"
 }
