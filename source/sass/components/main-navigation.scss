@@ -222,6 +222,44 @@
   }
 }
 
+.main-navigation__logo-link {
+  &:hover {
+    @media (hover: hover) {
+      position: relative;
+      opacity: 0.7;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    right: 90px;
+    bottom: 72px;
+  
+    display: block;
+    width: 66px;
+    height: 48px;
+  
+    background-image: url("../../img/logos/logo-hover-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+  
+    content: "";
+  }
+
+  &:hover::after {
+    @media (hover: hover) {
+      opacity: 1;
+    }
+  }
+}
+
+.main-navigation__logo-image {
+  display: block;
+}
+
 // Поиск
 
 .main-navigation__search {
