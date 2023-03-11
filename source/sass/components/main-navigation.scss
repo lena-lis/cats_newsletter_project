@@ -51,11 +51,6 @@
   100% { transform: translateY(0px); opacity: 1; }
 }
 
-@include bootstrap.keyframes(menu_opening) {
-  0% {transform: translateX(-80px);}
-  100% {transform: translateX(0);}
-}
-
 .main-navigation {
   @media (min-width: bootstrap.$tablet-width){
     display: flex;
@@ -66,6 +61,12 @@
 .main-navigation__container {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: bootstrap.$mobile-width-only) {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out;
+  }
 
   @media (min-width: bootstrap.$tablet-width){
     position: relative;
@@ -81,24 +82,19 @@
   }
 }
 
-// .main-navigation--closed .main-navigation__container {
-//   @media (max-width: bootstrap.$mobile-width-only) {
-//     display: none;
-//   }
-// }
-
-.main-navigation__toggle-input:checked {
-  & + .main-navigation__container { //неправильный селектор!
+.main-navigation__toggle:checked {
+  & ~ .main-navigation__container {
     position: absolute;
     top: 86px;
     left: 0;
     z-index: 10;
     width: 100%;
     background-color: #ffffff;
-    @include bootstrap.animate("menu_opening 1s ease-in-out");
+    max-height: 500px;
+    transition: max-height 0.75s ease-out;
   }
 
-  & + .main-navigation__toggle-icon {
+  & ~ .main-navigation__toggle-container .main-navigation__toggle-icon {
     display: block;
     position: absolute;
     @include bootstrap.center-element;
@@ -127,13 +123,13 @@
     }
   }
 
-  & ~ .main-navigation__toggle-text {
+  & ~ .main-navigation__toggle-container .main-navigation__toggle-text {
     @include bootstrap.animate("menuLabel_open 1s ease-in");
     animation-fill-mode: forwards;
   }
 }
 
-.main-navigation__toggle { // это стили, переходящие от button к label
+.main-navigation__toggle-container { 
   box-sizing: border-box;
   position: absolute;
   top: 20px;
@@ -151,7 +147,7 @@
   }
 }
 
-.main-navigation__toggle-input + .main-navigation__toggle-icon {
+.main-navigation__toggle-icon {
   position: inherit;
   @include bootstrap.center-element;
 
@@ -187,8 +183,6 @@
   }
 }
 
-
-
 .main-navigation__toggle-text {
   position: inherit;
   bottom: 12px;
@@ -200,16 +194,10 @@
   line-height: 10px;
 }
 
-.main-navigation__toggle-input ~ .main-navigation__toggle-text {
+.main-navigation__toggle ~ .main-navigation__toggle-container .main-navigation__toggle-text {
   @include bootstrap.animate("menuLabel_close 1s ease-in");
   animation-fill-mode: forwards;
 }
-
-
-
-// .main-navigation--nojs .main-navigation__toggle {
-//   display: none;
-// }
 
 // Логотип
 
