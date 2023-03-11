@@ -2,18 +2,18 @@
 
 @include bootstrap.keyframes(topBar_open) {
   0% { transform: translateY(0px) rotate(0deg) ; width: 30px; }
-  10% {transform: translateY(-2px) rotate(0deg); width: 30px; }
-  50% {transform: translateY(3px) rotate(45deg); width: 30px; }
-  75% {transform: translateY(-2px) rotate(45deg); width: 30px; }
-  100% {transform: translateY(0) rotate(45deg); width: 30px; }
+  10% {transform: translateY(10px) rotate(0deg); width: 30px; }
+  50% {transform: translateY(-20px) rotate(45deg); width: 40px; }
+  75% {transform: translateY(-10px) rotate(45deg); width: 40px; }
+  100% {transform: translateY(-14px) rotate(45deg); width: 40px; }
 }
 
 @include bootstrap.keyframes(bottomBar_open) {
   0% { transform: translateY(0px) rotate(0deg) ; width: 30px; }
-  10% { transform: translateY(-2px) rotate(0deg) ; width: 30px; }
-  60% {transform: translateY(3px) rotate(-45deg); width: 30px; }
-  75% {transform: translateY(-2px) rotate(-45deg); width: 30px; }
-  100% {transform: translateY(0) rotate(-45deg); width: 30px; }
+  10% { transform: translateY(10px) rotate(0deg) ; width: 30px; }
+  50% {transform: translateX(-11px) translateY(-20px) rotate(-45deg); width: 40px; }
+  75% {transform: translateX(-11px) translateY(-10px) rotate(-45deg); width: 40px; }
+  100% {transform: translateX(-11px) translateY(-14px) rotate(-45deg); width: 40px; }
 }
 
 @include bootstrap.keyframes(menuLabel_open) {
@@ -88,7 +88,7 @@
 // }
 
 .main-navigation__toggle-input:checked {
-  & + .main-navigation__container {
+  & + .main-navigation__container { //неправильный селектор!
     position: absolute;
     top: 86px;
     left: 0;
@@ -200,7 +200,7 @@
   line-height: 10px;
 }
 
-.main-navigation__toggle-input:checked ~ .main-navigation__toggle-text {
+.main-navigation__toggle-input ~ .main-navigation__toggle-text {
   @include bootstrap.animate("menuLabel_close 1s ease-in");
   animation-fill-mode: forwards;
 }
